@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb  1 12:44:27 2020
+
+@author: Diwas
+"""
+# This is solution to Q4c of HW1
+# This problem calculates the fraction of residue remaining from radioactive decay for input parameters entered by the user
+#====================================
+#           Modules
+#====================================
+import numpy as np
+import math as ma
+#====================================
+#           Defining functions
+#====================================
+def r_decay( t, T):
+    return math.exp((-t*0.693)/T)*100
+#====================================
+#      Ask user to nter parameters
+#====================================
+
+print( 'This program will calculate the fraction of material remaining after radioactive decay')    
+t = int(input( "Enter elapsed time in years: \n"))
+T = int(input( "Enter half-life in years: \n"))
+
+#====================================
+#           Print
+#====================================
+print( 'Remaining amount is %.4f percent of the original'%r_decay( t, T))
+##########----- END -----#########
